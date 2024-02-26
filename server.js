@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 app.get('/say', async (req, res) => {
     try {
         const keyword = req.query.keyword;
-        const functionResponse = await axios.get(`http://localhost:${PORT}/function?keyword=${keyword}`);
+        const functionResponse = await axios.get(`https://7iibd5ab3b.execute-api.us-east-2.amazonaws.com/dev/api-gateway/?name=Anjali&keyword=Hello`);
         res.send(functionResponse.data);
     } catch (error) {
         console.error(error.message);
